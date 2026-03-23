@@ -1,7 +1,13 @@
 function temprature_monitor(a)
-% TEMPERATURE_MONITOR - Reads temperature from Thirmistor, plots in real time,
-% It controls LEDs based on temperature thresholds.
-% Input a (Arduino object)
+% Documentation Block
+% TEMP_MONITOR Monitors real-time temperature using a thermistor and controls LEDs.
+%   TEMP_MONITOR(a) reads voltage data from an analogue temperature sensor
+%   connected to an Arduino, converts it to temperature using a thermistor
+%   model, and displays the result continuously. Based on predefined
+%   temperature limits, the function activates LEDs to indicate whether the
+%   temperature is within range (green), too low (yellow), or too high (red).
+%   The function runs in a continuous loop and updates both the command
+%   window and a live plot.
 
 %% High and Low tempreture
 low_temp = 18;    
